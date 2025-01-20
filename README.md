@@ -34,4 +34,5 @@ Embed posts from Xiaohongshu/Rednote directly in Discord
 ## Tutorial
 1. replace `xhslink.com` with the url of the deployed embedder instance
 
-    eg: http://xhslink.com/a/Y7qA55vwYXb4 => https://xhs.main-server.workers.dev/a/Y7qA55vwYXb4
+    eg public instance (replace .com with .xky.us):
+    http://xhslink.com/a/Y7qA55vwYXb4 => https://xhslink.xky.us/a/Y7qA55vwYXb4
