@@ -12,11 +12,13 @@ function createEmbed(post: XhsPost, options: { origin: string }): string {
   ogTags.push(`<meta property="og:description" content="${encode(post.content)}">`);
   ogTags.push(`<meta property="og:url" content="${post.url}">`);
   ogTags.push('<meta property="theme-color" content="#ff2442" />');
+  if (post?.images?.length) {
+    ogTags.push(`<meta property="og:image" content="${post.images[0]}">`);
+  }
 
   let alternateEmbed;
-  if (post.type == 'normal' && post.images) {
+  if (post.type == 'normal') {
     ogTags.push('<meta property="twitter:card" content="summary_large_image" />');
-    ogTags.push(`<meta property="og:image" content="${post.images[0]}">`);
     alternateEmbed = {
       "author_name": `💬 ${post.userInteraction.comment}   🔁 ${post.userInteraction.share}   ❤️ ${post.userInteraction.like}   ⭐ ${post.userInteraction.save}`,
       "author_url": post.url,

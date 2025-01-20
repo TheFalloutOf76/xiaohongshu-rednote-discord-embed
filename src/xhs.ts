@@ -64,14 +64,10 @@ async function getPost(shareId: string): Promise<XhsPost> {
             share: postData.interactInfo.shareCount,
             save: postData.interactInfo.collectedCount,
         },
+        images: postData.imageList.map((image: any) => image.urlDefault),
     };
-    if (postData.type == 'normal') {
-        post.images = [];
-        for (const image of postData.imageList) {
-            post.images.push(image.urlDefault);
-        }
-    }
-    else if (postData.type == 'video') {
+
+    if (postData.type == 'video') {
         post.video = postData.video.media.stream.h264[0].masterUrl;
     }
 

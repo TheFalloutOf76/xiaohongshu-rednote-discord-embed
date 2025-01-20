@@ -10,7 +10,7 @@ app.get('/', (c) => {
 
 app.get('/a/:id', async (c) => {
   const origin = new URL(c.req.url).origin;
-  if (c.req.header('User-Agent') != 'Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)') {
+  if (c.req.header('User-Agent') != 'Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)' && !origin.includes('localhost')) {
     return c.redirect(c.req.url.replace(origin, 'http://xhslink.com'));
   }
   const { id } = c.req.param();
