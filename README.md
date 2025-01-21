@@ -10,11 +10,11 @@ Embed posts from Xiaohongshu/Rednote directly in Discord
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/hono-xiaohongshu-discord
+    git clone https://github.com/TheFalloutOf76/xiaohongshu-rednote-discord-embed
     ```
 2. Navigate to the project directory:
     ```sh
-    cd hono-xiaohongshu-discord
+    cd xiaohongshu-rednote-discord-embed
     ```
 3. Install the dependencies:
     ```sh
